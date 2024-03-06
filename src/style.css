@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(to right, #ff0000, #ff6347);
+    
+}
+.container{
+    width: 60%;
+    height: 100vh; /*Ocupa el 100 por ciento visible*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+/*
+    Ya tenemos centrado todo el contenedor.
+*/
+/*
+    Le daremos estilo a nuestro subcontenedor.
+*/
+.container .card {
+    background-color: #f2f2f2;
+    box-shadow: 10px 20px 40px #9f9f9f;
+    padding: 1rem 2rem;
+    border-radius: 1rem ;
+}
+
+/*
+    Ahora es el turno de los subcontenedores que se tienen
+*/
+
+.container .card .color-inputs{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container .card .color-inputs input[type="color"]{
+    width: 100px;
+    height: 50px;
+}
+
+.container .card .gradient-orientation{
+    display: flex;
+    margin: 1rem 0;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.container .card .gradient-orientation button{
+    margin: 0 1rem;
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.container .card .gradient-orientation button.active{
+    background-color: #ddd;
+}
+
+
+.container .card .gradient-orientation button:hover{
+    cursor: pointer;
+}
+
+.container .card .gradient-text{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.container .card .gradient-text .btn-copy{
+    background-color: transparent;
+    border-style: none;
+    cursor: pointer;
+}

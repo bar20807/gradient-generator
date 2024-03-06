@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient Generator</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="card">
+        <h1>
+          Gradient Generator
+        </h1>
+        <div class="color-inputs">
+          <!--
+            Lo que haremos sera agregarle el valor inicial que debe de tener nuestro gradient
+            en este caso, le colocamos el valor de #ff0000 y #ff6347
+            debido a que estos colores son los que posee en estos momentos 
+            el background de nuestro card. Ahora, tocara asociar el color 
+            que se elige con javascript.
+          -->
+          <input type="color" id="first-color" value="#ff0000">
+          <input type="color" id="second-color" value="#ff6347">
+        </div>
+        <div class="gradient-orientation">
+          <!--
+            Agregaremos iconos de bootstrap
+          -->
+          <!--
+            La clase active, activara y desactivara el boton, es decir, 
+            al que le demos click, se desactivara y el siguiente se activara. 
+          -->
+          <button class="btn" data-value=" to top">
+            <i class="bi bi-arrow-up-circle-fill"></i>
+          </button>
+          <button class="btn" data-value="to bottom">
+            <i class="bi bi-arrow-down-circle-fill"></i>
+          </button>
+          <button class="btn" data-value=" to left">
+            <i class="bi bi-arrow-left-circle-fill"></i>
+          </button>
+          <button class="btn" data-value="to right">
+            <i class="bi bi-arrow-right-circle-fill"></i>
+          </button>
+          <button class="btn" data-value="45deg">
+            <i class="bi bi-arrow-up-left-circle-fill"></i>
+          </button>
+          <button class="btn" data-value="135deg">
+            <i class="bi bi-arrow-up-right-circle-fill"></i>
+          </button>
+          <button class="btn" data-value="225deg">
+            <i class="bi bi-arrow-down-right-circle-fill"></i>
+          </button>
+          <button class="btn" data-value="315deg">
+            <i class="bi bi-arrow-down-left-circle-fill"></i>
+          </button>
+        </div>
+  
+        <div class="gradient-text">
+          <p id="text">
+            linear-gradient(to right, red, tomato);
+            <!--
+              Ahora le daremos vida al boton del clipboard, para que
+              al darle click, copie el texto que se encuentra en el parrafo
+            -->
+            <button id="btn-copy" class="btn-copy"><i class="bi bi-clipboard-fill"></i></button>
+          </p>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
